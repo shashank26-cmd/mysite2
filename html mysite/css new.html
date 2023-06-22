@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            text-align: center;
+        }
+        body{
+            margin: 0;
+            background-color: aquamarine ;
+        }
+        .topnav{
+            overflow: hidden;
+            background-color: #333;
+
+        }
+        .topnav a{
+            display: inline-block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .topnav a:hover{
+            background-color: #ddd;
+            color: black;
+            
+        }
+        .column{
+            float: left;
+            width: 33.33%;
+            padding: 15px;
+        }
+        .row::after{
+            content: "";
+            display:table;
+            clear:both;
+        }
+        .footer{
+            background-color: #2dc0da;
+            padding: 10px;
+            text-align: center;
+            margin-top: 300px;
+            
+        }
+        .multicolortext{
+            background-image: linear-gradient(to left,violet,indigo,blue,green,yellow,orange,red);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .flex-container{
+            display: flex;
+            background-color: rgb(217, 127, 235);
+            /* flex-direction: column-reverse; */
+            justify-content: space-around; 
+            /* flex-wrap: wrap; */
+            align-items: baseline;
+            align-items: stretch;
+            flex-flow: row-wrap;
+            /* flex-flow: wrap-reverse; */
+            /* flex-flow: column wrap; */
+        }
+        .flex-container>div{
+            background-color: rgb(255, 238, 192);
+            width: 100px;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 75px;
+        }
+        @media screen and (min-width:720px){
+            body{
+                background-color: rgb(252, 0, 0);
+            }
+        }
+        @media screen and (max-width:720px){
+            .flex-container{
+                background-color: rgb(187, 224, 22);
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Header</h1>
+    </div>
+    <div class="multicolortext">
+        <h2>
+            Links that might help you to keep you updated and entertained
+        </h2>
+    </div>
+    <div class="column">
+        <div class="topnav">
+            <a href="https://ww7.soap2dayhd.co/">link to wath movies online</a>
+        </div>
+    </div>
+    <div class="column">
+        <div class="topnav">
+            <a href="www.google.com">search whatever you want</a>
+        </div>
+    </div>
+    <div class="column">
+        <div class="topnav">
+            <a href="https://www.crazygames.com/">Play any game you want</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="topnav">
+                <a href="https://ww7.soap2dayhd.co/">link to wath movies online</a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="topnav">
+                <a href="www.google.com">search whatever you want</a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="topnav">
+                <a href="https://www.crazygames.com/">Play any game you want</a>
+            </div>
+        </div>
+    </div>
+    <h3>Below this is a flex-container</h3>
+    <div class="flex-container">
+        <div><a href="">1</a></div>
+        <div><a href="">2</a></div>
+        <div><a href="">3</a></div>
+    </div>
+    <h2>Order property</h2>
+    <div class="flex-container">
+        <div style="order:3"><h1>1</h1></div>
+        <div style="order: 2"><h6>2</h6></div>
+        <div style="order: 4"><h3>3</h3></div>
+        <div style="order: 1"><small>4</small></div>
+    </div>
+    <h2>Grow property</h2>
+    <div class="flex-container">
+        <div style="flex-grow:3"><h3>1</h3></div>
+        <div style="flex-grow: 2"><h3>2</h3></div>
+        <div style="flex-grow: 1"><h3>3</h3></div>
+    </div>
+    <h2>Shrink property</h2>
+    <div class="flex-container">
+        <div>1</div>
+        <div style="flex-shrink: 0">2</div>
+        <div>3</div>
+    </div>
+    <h2>flex flow property</h2>
+    <div class="flex-container">
+        <div>hello</div>
+        <div>hello</div>
+        <div>hello</div>
+    </div>
+    <div class="footer">
+        <p>
+            terms and conditions applied
+        </p>
+    </div>
+</body>
+</html>
